@@ -1,4 +1,15 @@
-.box {
+.box, .container {
     display: inline-block;
+}
+
+.container {
     margin: 0.5em;
+}
+
+.color-id {
+    color: #fff;
+    background-color: #000;
+    display: table;
+    margin: 0 auto;
+    font-family: monospace;
 }

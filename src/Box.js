@@ -1,7 +1,7 @@
 import React from 'react';
 import './Box.css'
 
-const Box = ({width, height, bgColor}) => {
+const Box = ({id, width, height, bgColor}) => {
 
     const handleClick = (e) => {
         e.preventDefault();
@@ -9,12 +9,15 @@ const Box = ({width, height, bgColor}) => {
     }
 
     return (
-        <div className='box' style={{
+        <div className='container'>
+            <div className='box' data-testid='box' key={id} style={{
             backgroundColor: bgColor,
             width: width,
             height: height
-        }}>
-            <button onClick={handleClick}>X</button>
+            }}>
+                <button data-testid='delete-button' onClick={handleClick}>X</button>
+                <span className='color-id'>{bgColor}</span>
+            </div>
         </div>
     )
 }

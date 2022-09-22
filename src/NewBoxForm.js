@@ -28,7 +28,7 @@ const NewBoxForm = ({ addBox }) => {
             <input 
                 id="width"
                 type="number" 
-                min="10"
+                min="100"
                 max="500"
                 name="width" 
                 placeholder="Width"
@@ -39,7 +39,7 @@ const NewBoxForm = ({ addBox }) => {
             <input 
                 id="height"
                 type="number" 
-                min="10"
+                min="100"
                 max="500"
                 name="height" 
                 placeholder="Height"
