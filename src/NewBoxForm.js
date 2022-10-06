@@ -60,4 +60,4 @@ const NewBoxForm = ({ addBox }) => {
     )
 }
 
-export default NewBoxForm
+export default NewBoxForm;

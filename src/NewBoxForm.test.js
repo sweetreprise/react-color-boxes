@@ -1,7 +1,6 @@
 import React from 'react';
-import { render, fireEvent, getByLabelText } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import NewBoxForm from './NewBoxForm';
-import BoxList from './BoxList'
 
 it("renders component without crashing", () => {
     render(<NewBoxForm />);
@@ -13,7 +12,7 @@ it("matches snapshot", () => {
 });
 
 it('should add a new box', () => {
-    const { queryByText, getByLabelText, getByText } = render(<NewBoxForm />);
+    const { queryByText, getByLabelText } = render(<NewBoxForm addBox={() => {}}/>);
     const width = getByLabelText('Width:');
     const height = getByLabelText('Height:');
     const colour = getByLabelText('Background-color:');
